@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>$250 Gift Card Giveaway | Enter Now</title>
+  <title>Chance to Win a $250 Amazon Gift Card</title>
 
   <meta
     name="description"
-    content="Discover our $250 gift card giveaway. Learn about the promotion and check the official entry details."
+    content="Complete the required offer and enter for a chance to win a $250 Amazon Gift Card."
   />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
@@ -27,13 +27,15 @@
     }
 
     :root {
-      --primary: #ffb703;
-      --secondary: #fb8500;
-      --dark: #07111f;
-      --card: #101d31;
+      --bg: #070b13;
+      --bg2: #0d1422;
+      --card: rgba(255,255,255,0.055);
+      --border: rgba(255,255,255,0.10);
       --text: #ffffff;
-      --muted: #aab8ca;
-      --border: rgba(255, 255, 255, 0.1);
+      --muted: #9ba9bd;
+      --orange: #ff9900;
+      --orange2: #ffb52e;
+      --green: #35d07f;
     }
 
     html {
@@ -42,7 +44,7 @@
 
     body {
       font-family: "Inter", sans-serif;
-      background: var(--dark);
+      background: var(--bg);
       color: var(--text);
       overflow-x: hidden;
     }
@@ -57,190 +59,210 @@
       margin: auto;
     }
 
-    /* Background */
+    /* =========================
+       BACKGROUND
+    ========================= */
 
-    .page-wrapper {
+    .page {
       min-height: 100vh;
       background:
         radial-gradient(
-          circle at 10% 10%,
-          rgba(255, 183, 3, 0.13),
-          transparent 30%
-        ),
-        radial-gradient(
-          circle at 90% 30%,
-          rgba(33, 158, 188, 0.12),
+          circle at 10% 5%,
+          rgba(255,153,0,0.12),
           transparent 28%
         ),
-        var(--dark);
+        radial-gradient(
+          circle at 90% 25%,
+          rgba(70,110,255,0.10),
+          transparent 30%
+        ),
+        var(--bg);
     }
 
-    /* Navbar */
+    /* =========================
+       NAVBAR
+    ========================= */
 
     header {
-      padding: 22px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      background: rgba(7,11,19,0.78);
       border-bottom: 1px solid var(--border);
     }
 
-    .navbar {
+    .nav {
+      height: 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
     }
 
     .logo {
-      font-size: 24px;
+      font-size: 21px;
       font-weight: 900;
-      letter-spacing: -1px;
+      letter-spacing: -0.8px;
     }
 
     .logo span {
-      color: var(--primary);
+      color: var(--orange);
     }
 
     .nav-links {
       display: flex;
-      gap: 28px;
       align-items: center;
+      gap: 28px;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      transition: 0.25s;
     }
 
     .nav-links a:hover {
-      color: white;
+      color: #fff;
     }
 
-    .nav-button {
-      background: var(--primary);
+    .nav-cta {
+      padding: 11px 19px;
+      border-radius: 9px;
+      background: var(--orange);
       color: #111;
-      padding: 12px 20px;
-      border-radius: 30px;
-      font-weight: 800;
-      font-size: 13px;
-      transition: 0.3s;
+      font-size: 12px;
+      font-weight: 900;
+      transition: 0.25s;
     }
 
-    .nav-button:hover {
+    .nav-cta:hover {
       transform: translateY(-2px);
-      background: #ffc928;
+      background: var(--orange2);
     }
 
-    /* Hero */
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
-      padding: 85px 0 70px;
+      padding: 90px 0 70px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+      grid-template-columns: 1fr 0.9fr;
       gap: 65px;
       align-items: center;
     }
 
-    .badge {
+    .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255, 183, 3, 0.12);
-      border: 1px solid rgba(255, 183, 3, 0.3);
-      color: var(--primary);
-      padding: 9px 15px;
-      border-radius: 30px;
-      font-size: 12px;
+      padding: 8px 13px;
+      border: 1px solid rgba(255,153,0,0.25);
+      background: rgba(255,153,0,0.08);
+      color: #ffbd55;
+      border-radius: 100px;
+      font-size: 11px;
       font-weight: 800;
-      margin-bottom: 24px;
+      letter-spacing: 0.4px;
+      margin-bottom: 22px;
     }
 
-    .badge::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      background: #35d07f;
+    .live-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--green);
       border-radius: 50%;
-      box-shadow: 0 0 12px #35d07f;
+      box-shadow: 0 0 12px var(--green);
     }
 
     h1 {
-      font-size: clamp(38px, 5vw, 68px);
-      line-height: 1.06;
-      letter-spacing: -2.5px;
-      margin-bottom: 24px;
+      font-size: clamp(42px, 5.5vw, 72px);
+      line-height: 1.02;
+      letter-spacing: -3px;
       font-weight: 900;
+      margin-bottom: 23px;
     }
 
-    h1 span {
-      color: var(--primary);
+    h1 .highlight {
+      color: var(--orange);
     }
 
-    .hero-description {
+    .hero-text {
       color: var(--muted);
-      font-size: 17px;
+      max-width: 555px;
+      font-size: 16px;
       line-height: 1.8;
-      max-width: 520px;
       margin-bottom: 30px;
     }
 
-    .hero-buttons {
+    .cta-row {
       display: flex;
-      gap: 14px;
+      gap: 12px;
       flex-wrap: wrap;
-      margin-bottom: 28px;
+      margin-bottom: 22px;
     }
 
     .primary-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 9px;
+      padding: 16px 25px;
+      border-radius: 11px;
       background: linear-gradient(
         135deg,
-        var(--primary),
-        var(--secondary)
+        #ffb52e,
+        #ff8a00
       );
       color: #111;
-      padding: 17px 28px;
-      border-radius: 12px;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 900;
-      transition: 0.3s;
-      box-shadow: 0 10px 35px rgba(251, 133, 0, 0.18);
+      box-shadow:
+        0 12px 35px rgba(255,153,0,0.20);
+      transition: 0.25s;
     }
 
     .primary-btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(251, 133, 0, 0.3);
+      box-shadow:
+        0 18px 45px rgba(255,153,0,0.30);
     }
 
     .secondary-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 17px 25px;
+      padding: 16px 22px;
+      border-radius: 11px;
       border: 1px solid var(--border);
-      border-radius: 12px;
-      font-size: 14px;
+      color: #d8e0eb;
+      font-size: 13px;
       font-weight: 700;
-      color: var(--muted);
-      transition: 0.3s;
+      transition: 0.25s;
     }
 
     .secondary-btn:hover {
-      border-color: var(--primary);
-      color: white;
+      border-color: rgba(255,153,0,0.45);
+      background: rgba(255,255,255,0.04);
     }
 
-    .trust-line {
-      color: #8091a7;
-      font-size: 12px;
+    .micro-text {
+      color: #718096;
+      font-size: 11px;
+      line-height: 1.6;
     }
 
-    /* Gift Card Illustration */
+    /* =========================
+       GIFT CARD
+    ========================= */
 
-    .visual-area {
+    .visual {
       position: relative;
-      min-height: 400px;
+      min-height: 430px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -248,378 +270,473 @@
 
     .glow {
       position: absolute;
-      width: 320px;
-      height: 320px;
-      background: rgba(255, 183, 3, 0.15);
-      filter: blur(80px);
+      width: 330px;
+      height: 330px;
+      background: rgba(255,153,0,0.17);
+      filter: blur(85px);
       border-radius: 50%;
     }
 
     .gift-card {
       position: relative;
-      width: min(100%, 430px);
-      aspect-ratio: 1.6 / 1;
+      width: min(430px, 100%);
+      aspect-ratio: 1.62;
       border-radius: 22px;
-      padding: 30px;
+      padding: 29px;
       overflow: hidden;
       background:
         linear-gradient(
           135deg,
-          #ffcf33 0%,
-          #ff9f1c 50%,
-          #e85d04 100%
+          #ffd15c 0%,
+          #ffad1f 45%,
+          #ed6c00 100%
         );
-      color: #111;
-      box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.4),
-        0 0 80px rgba(255, 183, 3, 0.15);
+      color: #151515;
       transform: rotate(5deg);
-      transition: 0.5s;
+      box-shadow:
+        0 35px 90px rgba(0,0,0,0.45),
+        0 0 70px rgba(255,153,0,0.12);
+      transition: 0.45s;
       z-index: 2;
     }
 
     .gift-card:hover {
-      transform: rotate(0deg) scale(1.03);
+      transform: rotate(0deg) scale(1.025);
     }
 
-    .gift-card::before {
-      content: "";
+    .circle-one,
+    .circle-two {
       position: absolute;
-      width: 240px;
-      height: 240px;
-      border: 35px solid rgba(255, 255, 255, 0.15);
       border-radius: 50%;
-      right: -100px;
-      top: -100px;
+      border: 35px solid rgba(255,255,255,0.12);
     }
 
-    .gift-card::after {
-      content: "";
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      border: 25px solid rgba(255, 255, 255, 0.12);
-      border-radius: 50%;
+    .circle-one {
+      width: 260px;
+      height: 260px;
+      right: -115px;
+      top: -120px;
+    }
+
+    .circle-two {
+      width: 190px;
+      height: 190px;
       left: -100px;
-      bottom: -110px;
+      bottom: -100px;
     }
 
-    .card-top {
+    .card-header {
+      position: relative;
+      z-index: 2;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: relative;
-      z-index: 1;
     }
 
     .card-brand {
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 900;
-      letter-spacing: -0.5px;
+      letter-spacing: 0.5px;
     }
 
-    .card-chip {
+    .chip {
       width: 42px;
-      height: 32px;
+      height: 31px;
       border-radius: 7px;
-      background: rgba(255, 255, 255, 0.5);
-      border: 1px solid rgba(0, 0, 0, 0.15);
+      background: rgba(255,255,255,0.45);
+      border: 1px solid rgba(0,0,0,0.12);
     }
 
-    .card-value {
+    .card-amount {
       position: relative;
-      z-index: 1;
-      font-size: clamp(45px, 6vw, 72px);
-      font-weight: 900;
+      z-index: 2;
+      margin-top: 30px;
+      font-size: clamp(48px, 6vw, 72px);
+      line-height: 1;
       letter-spacing: -4px;
-      margin-top: 28px;
+      font-weight: 900;
     }
 
-    .card-label {
+    .card-title {
       position: relative;
-      z-index: 1;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 2px;
+      z-index: 2;
+      margin-top: 8px;
+      font-size: 11px;
       text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 900;
     }
 
-    .card-bottom {
+    .card-footer {
       position: absolute;
-      bottom: 24px;
-      left: 30px;
-      right: 30px;
+      z-index: 2;
+      bottom: 23px;
+      left: 29px;
+      right: 29px;
       display: flex;
       justify-content: space-between;
-      font-size: 10px;
-      font-weight: 800;
+      font-size: 9px;
+      font-weight: 900;
       letter-spacing: 1px;
-      z-index: 1;
     }
 
-    .floating-tag {
+    .floating-badge {
       position: absolute;
-      z-index: 3;
-      bottom: 25px;
-      left: 0;
+      z-index: 5;
+      bottom: 22px;
+      left: 3%;
       background: #fff;
       color: #111;
-      padding: 14px 18px;
-      border-radius: 14px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-      font-size: 13px;
+      padding: 13px 16px;
+      border-radius: 12px;
+      font-size: 11px;
       font-weight: 900;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
       animation: float 3s ease-in-out infinite;
     }
 
     @keyframes float {
-      0%, 100% {
+      0%,100% {
         transform: translateY(0);
       }
-
       50% {
-        transform: translateY(-10px);
+        transform: translateY(-9px);
       }
     }
 
-    /* Countdown */
+    /* =========================
+       OFFER BAR
+    ========================= */
 
-    .countdown-section {
-      padding: 0 0 80px;
-    }
-
-    .countdown-box {
-      background: linear-gradient(
-        135deg,
-        rgba(255, 183, 3, 0.12),
-        rgba(255, 255, 255, 0.03)
-      );
-      border: 1px solid rgba(255, 183, 3, 0.2);
-      border-radius: 22px;
-      padding: 35px;
-      text-align: center;
-    }
-
-    .countdown-box h2 {
-      font-size: 25px;
-      margin-bottom: 10px;
-    }
-
-    .countdown-box p {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 25px;
-    }
-
-    .timer {
+    .offer-bar {
+      margin-top: 15px;
+      padding: 18px 20px;
+      border-radius: 13px;
+      border: 1px solid rgba(53,208,127,0.16);
+      background: rgba(53,208,127,0.05);
       display: flex;
-      justify-content: center;
-      gap: 15px;
+      align-items: center;
+      gap: 12px;
     }
 
-    .time-item {
-      min-width: 90px;
-      padding: 18px 12px;
-      border-radius: 14px;
-      background: rgba(0, 0, 0, 0.3);
-      border: 1px solid var(--border);
-    }
-
-    .time-item strong {
-      display: block;
-      font-size: 32px;
+    .offer-check {
+      width: 25px;
+      height: 25px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(53,208,127,0.13);
+      color: var(--green);
+      font-size: 12px;
       font-weight: 900;
-      color: var(--primary);
+      flex-shrink: 0;
     }
 
-    .time-item span {
-      font-size: 10px;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    .offer-bar span {
+      color: #b6c3d3;
+      font-size: 12px;
+      line-height: 1.5;
     }
 
-    /* Features */
+    /* =========================
+       HOW IT WORKS
+    ========================= */
 
-    .features {
-      padding: 80px 0;
+    .section {
+      padding: 85px 0;
     }
 
     .section-heading {
+      max-width: 650px;
       text-align: center;
-      max-width: 620px;
-      margin: 0 auto 45px;
+      margin: 0 auto 48px;
+    }
+
+    .section-heading .small-title {
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 11px;
+      font-weight: 900;
+      margin-bottom: 12px;
     }
 
     .section-heading h2 {
-      font-size: clamp(28px, 4vw, 42px);
-      letter-spacing: -1px;
+      font-size: clamp(30px, 4vw, 45px);
+      letter-spacing: -1.5px;
       margin-bottom: 15px;
     }
 
     .section-heading p {
       color: var(--muted);
+      font-size: 14px;
       line-height: 1.7;
-      font-size: 15px;
     }
 
-    .feature-grid {
+    .steps {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
     }
 
-    .feature-card {
-      padding: 30px;
-      background: rgba(255, 255, 255, 0.035);
+    .step {
+      position: relative;
+      padding: 29px 23px;
+      border-radius: 17px;
       border: 1px solid var(--border);
-      border-radius: 18px;
+      background: var(--card);
       transition: 0.3s;
     }
 
-    .feature-card:hover {
+    .step:hover {
       transform: translateY(-6px);
-      border-color: rgba(255, 183, 3, 0.4);
+      border-color: rgba(255,153,0,0.3);
     }
 
-    .feature-icon {
-      font-size: 35px;
+    .step-number {
+      width: 39px;
+      height: 39px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      background: rgba(255,153,0,0.12);
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 900;
       margin-bottom: 20px;
     }
 
-    .feature-card h3 {
-      font-size: 18px;
-      margin-bottom: 12px;
+    .step h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
     }
 
-    .feature-card p {
+    .step p {
       color: var(--muted);
-      font-size: 14px;
+      font-size: 12px;
       line-height: 1.7;
     }
 
-    /* CTA Section */
+    /* =========================
+       BENEFITS
+    ========================= */
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .benefit {
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      background: rgba(255,255,255,0.035);
+    }
+
+    .benefit-icon {
+      font-size: 28px;
+      margin-bottom: 17px;
+    }
+
+    .benefit h3 {
+      font-size: 16px;
+      margin-bottom: 9px;
+    }
+
+    .benefit p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       COUNTDOWN
+    ========================= */
+
+    .countdown-wrap {
+      padding: 45px 20px;
+      border-radius: 22px;
+      text-align: center;
+      border: 1px solid rgba(255,153,0,0.16);
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(255,153,0,0.09),
+          transparent 65%
+        ),
+        rgba(255,255,255,0.025);
+    }
+
+    .countdown-wrap h2 {
+      font-size: 26px;
+      margin-bottom: 9px;
+    }
+
+    .countdown-wrap > p {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 26px;
+    }
+
+    .timer {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .timer-box {
+      width: 92px;
+      padding: 16px 8px;
+      border-radius: 13px;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.25);
+    }
+
+    .timer-box strong {
+      display: block;
+      color: var(--orange);
+      font-size: 29px;
+      font-weight: 900;
+    }
+
+    .timer-box span {
+      color: #738196;
+      text-transform: uppercase;
+      font-size: 9px;
+      letter-spacing: 1px;
+    }
+
+    /* =========================
+       FINAL CTA
+    ========================= */
 
     .final-cta {
-      padding: 60px 0 90px;
+      padding: 85px 0 95px;
     }
 
     .cta-box {
+      position: relative;
+      overflow: hidden;
       text-align: center;
-      padding: 65px 30px;
-      border-radius: 24px;
+      padding: 70px 25px;
+      border-radius: 25px;
+      border: 1px solid rgba(255,153,0,0.20);
       background:
         radial-gradient(
           circle at 50% 0%,
-          rgba(255, 183, 3, 0.15),
+          rgba(255,153,0,0.17),
           transparent 55%
         ),
-        rgba(255, 255, 255, 0.035);
-      border: 1px solid var(--border);
+        rgba(255,255,255,0.035);
     }
 
     .cta-box h2 {
-      font-size: clamp(28px, 4vw, 44px);
-      margin-bottom: 16px;
+      font-size: clamp(31px, 4vw, 48px);
+      letter-spacing: -1.5px;
+      margin-bottom: 14px;
     }
 
     .cta-box p {
+      max-width: 570px;
+      margin: 0 auto 27px;
       color: var(--muted);
-      max-width: 550px;
-      margin: 0 auto 28px;
+      font-size: 13px;
       line-height: 1.7;
-      font-size: 14px;
     }
 
-    /* Footer */
+    .cta-note {
+      color: #69778a;
+      font-size: 10px;
+      margin-top: 16px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
-      padding: 30px 0;
+      padding: 32px 0;
       border-top: 1px solid var(--border);
     }
 
-    .footer-content {
+    .footer-main {
       display: flex;
+      align-items: center;
       justify-content: space-between;
       gap: 20px;
-      align-items: center;
     }
 
-    .footer-content p {
-      color: #718198;
-      font-size: 12px;
-      line-height: 1.6;
+    .footer-main p {
+      color: #657286;
+      font-size: 11px;
     }
 
     .footer-links {
       display: flex;
       gap: 20px;
-      font-size: 12px;
-      color: var(--muted);
+      color: #8794a7;
+      font-size: 11px;
     }
 
     .disclaimer {
       margin-top: 20px;
-      color: #63748b;
-      font-size: 11px;
+      color: #596679;
+      font-size: 10px;
       line-height: 1.7;
       text-align: center;
     }
 
-    /* Responsive */
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 900px) {
+
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 45px;
       }
 
       .hero-content {
         text-align: center;
       }
 
-      .hero-description {
+      .hero-text {
         margin-left: auto;
         margin-right: auto;
       }
 
-      .hero-buttons {
+      .cta-row {
         justify-content: center;
       }
 
-      .visual-area {
+      .visual {
         min-height: 350px;
       }
 
-      .feature-grid {
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .benefits {
         grid-template-columns: 1fr;
-      }
-
-      .feature-card {
-        text-align: center;
-      }
-
-      .floating-tag {
-        left: 8%;
       }
     }
 
     @media (max-width: 600px) {
-      header {
-        padding: 18px 0;
+
+      .nav {
+        height: 65px;
       }
 
       .nav-links {
         display: none;
       }
 
-      .logo {
-        font-size: 20px;
-      }
-
-      .nav-button {
-        padding: 10px 15px;
-        font-size: 11px;
+      .nav-cta {
+        padding: 10px 14px;
+        font-size: 10px;
       }
 
       .hero {
@@ -627,14 +744,15 @@
       }
 
       h1 {
-        letter-spacing: -1.5px;
+        font-size: 42px;
+        letter-spacing: -2px;
       }
 
-      .hero-description {
+      .hero-text {
         font-size: 14px;
       }
 
-      .hero-buttons {
+      .cta-row {
         flex-direction: column;
         align-items: stretch;
       }
@@ -644,73 +762,67 @@
         width: 100%;
       }
 
-      .visual-area {
+      .visual {
         min-height: 280px;
       }
 
       .gift-card {
         padding: 22px;
-        border-radius: 16px;
-        transform: rotate(3deg);
+        border-radius: 17px;
       }
 
-      .card-value {
-        font-size: 48px;
-        letter-spacing: -2px;
-        margin-top: 22px;
+      .card-amount {
+        font-size: 50px;
+        margin-top: 24px;
       }
 
-      .card-bottom {
+      .card-footer {
         left: 22px;
         right: 22px;
-        bottom: 18px;
+        bottom: 17px;
       }
 
-      .floating-tag {
-        font-size: 11px;
-        padding: 11px 13px;
+      .floating-badge {
+        left: 1%;
         bottom: 0;
+        padding: 10px 12px;
+        font-size: 10px;
       }
 
-      .countdown-box {
-        padding: 25px 12px;
+      .offer-bar {
+        text-align: left;
       }
 
-      .countdown-box h2 {
-        font-size: 21px;
+      .section {
+        padding: 60px 0;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
       }
 
       .timer {
-        gap: 7px;
+        gap: 6px;
       }
 
-      .time-item {
-        min-width: 0;
-        flex: 1;
-        padding: 14px 5px;
+      .timer-box {
+        width: 70px;
+        padding: 13px 5px;
       }
 
-      .time-item strong {
-        font-size: 25px;
+      .timer-box strong {
+        font-size: 23px;
       }
 
-      .time-item span {
-        font-size: 8px;
-      }
-
-      .features {
-        padding: 50px 0;
-      }
-
-      .feature-card {
-        padding: 25px 20px;
+      .timer-box span {
+        font-size: 7px;
       }
 
       .cta-box {
-        padding: 45px 20px;
+        padding: 50px 18px;
       }
 
-      .footer-content {
+      .footer-main {
         flex-direction: column;
         text-align: center;
       }
@@ -723,422 +835,617 @@
 </head>
 
 <body>
-  <div class="page-wrapper">
 
-    <!-- Navbar -->
+<div class="page">
 
-    <header>
-      <div class="container navbar">
+  <!-- NAVBAR -->
 
-        <a href="#" class="logo">
-          Gift<span>Drop</span>
-        </a>
+  <header>
+    <div class="container nav">
 
-        <nav class="nav-links">
-          <a href="#how-it-works">How It Works</a>
-          <a href="#details">Details</a>
-          <a href="#about">About</a>
-        </nav>
+      <a href="#" class="logo">
+        Gift<span>Drop</span>
+      </a>
 
-        <a
-          href="https://fdfrd.com"
-          class="nav-button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Enter Now →
-        </a>
+      <nav class="nav-links">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#details">Details</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a
+        href="https://fdfrd.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="nav-cta"
+      >
+        Enter Now →
+      </a>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container hero-grid">
+
+      <div>
+
+        <div class="eyebrow">
+          <span class="live-dot"></span>
+          GIFT CARD GIVEAWAY
+        </div>
+
+        <h1>
+          Your <span class="highlight">Chance to Win</span>
+          a $250 Gift Card
+        </h1>
+
+        <p class="hero-text">
+          Complete the required offer, unlock your giveaway entry,
+          and get your chance to win a $250 Amazon Gift Card.
+        </p>
+
+        <div class="cta-row">
+
+          <a
+            href="https://fdfrd.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="primary-btn"
+          >
+            🎁 Complete Offer & Enter →
+          </a>
+
+          <a
+            href="#how-it-works"
+            class="secondary-btn"
+          >
+            How It Works ↓
+          </a>
+
+        </div>
+
+        <p class="micro-text">
+          Participation eligibility and offer requirements may apply.
+          Please review the promotion details before continuing.
+        </p>
+
+        <div class="offer-bar">
+          <div class="offer-check">✓</div>
+
+          <span>
+            <strong>One simple step:</strong>
+            Complete the required offer before entering the giveaway.
+          </span>
+        </div>
 
       </div>
-    </header>
 
-    <!-- Hero -->
 
-    <main>
+      <!-- GIFT CARD VISUAL -->
 
-      <section class="hero">
-        <div class="container hero-grid">
+      <div class="visual">
 
-          <div class="hero-content">
+        <div class="glow"></div>
 
-            <div class="badge">
-              GIVEAWAY OPPORTUNITY
+        <div class="gift-card">
+
+          <div class="circle-one"></div>
+          <div class="circle-two"></div>
+
+          <div class="card-header">
+            <div class="card-brand">
+              GIFT CARD
             </div>
 
-            <h1>
-              Your Chance to Get a
-              <span>$250</span>
-              Gift Card
-            </h1>
-
-            <p class="hero-description">
-              Discover our exciting gift card giveaway opportunity.
-              Explore the promotion details and find out how you
-              can participate.
-            </p>
-
-            <div class="hero-buttons">
-
-              <a
-                href="https://fdfrd.com"
-                class="primary-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                🎁 Enter Giveaway →
-              </a>
-
-              <a
-                href="#how-it-works"
-                class="secondary-btn"
-              >
-                Learn More ↓
-              </a>
-
-            </div>
-
-            <p class="trust-line">
-              ✓ Review the official promotion details before participating
-            </p>
-
+            <div class="chip"></div>
           </div>
 
-          <!-- Gift Card Visual -->
-
-          <div class="visual-area">
-
-            <div class="glow"></div>
-
-            <div class="gift-card">
-
-              <div class="card-top">
-                <div class="card-brand">
-                  GIFT CARD
-                </div>
-
-                <div class="card-chip"></div>
-              </div>
-
-              <div class="card-value">
-                $250
-              </div>
-
-              <div class="card-label">
-                Shopping Reward
-              </div>
-
-              <div class="card-bottom">
-                <span>GIFT DROP</span>
-                <span>250 USD</span>
-              </div>
-
-            </div>
-
-            <div class="floating-tag">
-              🎉 $250 VALUE
-            </div>
-
+          <div class="card-amount">
+            $250
           </div>
 
-        </div>
-      </section>
-
-      <!-- Countdown -->
-
-      <section class="countdown-section">
-        <div class="container">
-
-          <div class="countdown-box">
-
-            <h2>⏰ Promotion Countdown</h2>
-
-            <p>
-              Check the remaining time for this promotional opportunity.
-            </p>
-
-            <div class="timer">
-
-              <div class="time-item">
-                <strong id="days">07</strong>
-                <span>Days</span>
-              </div>
-
-              <div class="time-item">
-                <strong id="hours">00</strong>
-                <span>Hours</span>
-              </div>
-
-              <div class="time-item">
-                <strong id="minutes">00</strong>
-                <span>Minutes</span>
-              </div>
-
-              <div class="time-item">
-                <strong id="seconds">00</strong>
-                <span>Seconds</span>
-              </div>
-
-            </div>
-
+          <div class="card-title">
+            Amazon Gift Card
           </div>
 
-        </div>
-      </section>
-
-      <!-- Features -->
-
-      <section class="features" id="how-it-works">
-
-        <div class="container">
-
-          <div class="section-heading">
-
-            <h2>How It Works</h2>
-
-            <p>
-              Follow the official promotion instructions to learn
-              how participation works.
-            </p>
-
-          </div>
-
-          <div class="feature-grid">
-
-            <div class="feature-card">
-
-              <div class="feature-icon">🎁</div>
-
-              <h3>Explore the Offer</h3>
-
-              <p>
-                Discover the $250 gift card promotion and review
-                the available information.
-              </p>
-
-            </div>
-
-            <div class="feature-card">
-
-              <div class="feature-icon">📝</div>
-
-              <h3>Check Entry Details</h3>
-
-              <p>
-                Read the official terms and follow the valid
-                participation instructions.
-              </p>
-
-            </div>
-
-            <div class="feature-card">
-
-              <div class="feature-icon">🏆</div>
-
-              <h3>Check the Outcome</h3>
-
-              <p>
-                Review the official winner announcement process
-                and promotion information.
-              </p>
-
-            </div>
-
+          <div class="card-footer">
+            <span>GIFT DROP</span>
+            <span>250 USD</span>
           </div>
 
         </div>
 
-      </section>
-
-      <!-- Details -->
-
-      <section class="features" id="details">
-
-        <div class="container">
-
-          <div class="section-heading">
-
-            <h2>Promotion Details</h2>
-
-            <p>
-              Please verify the following information before
-              participating.
-            </p>
-
-          </div>
-
-          <div class="feature-grid">
-
-            <div class="feature-card">
-              <div class="feature-icon">💳</div>
-              <h3>Reward Value</h3>
-              <p>
-                Advertised reward value: $250.
-                The actual reward must be confirmed by the
-                legitimate promotion organizer.
-              </p>
-            </div>
-
-            <div class="feature-card">
-              <div class="feature-icon">📅</div>
-              <h3>Promotion Period</h3>
-              <p>
-                Confirm the official start date, end date,
-                eligibility requirements and applicable rules.
-              </p>
-            </div>
-
-            <div class="feature-card">
-              <div class="feature-icon">🔒</div>
-              <h3>Safety First</h3>
-              <p>
-                Never share passwords, OTPs, payment details
-                or sensitive personal information to claim a reward.
-              </p>
-            </div>
-
-          </div>
-
+        <div class="floating-badge">
+          ✨ CHANCE TO WIN
         </div>
 
-      </section>
+      </div>
 
-      <!-- Final CTA -->
+    </div>
 
-      <section class="final-cta" id="about">
+  </section>
 
-        <div class="container">
 
-          <div class="cta-box">
+  <!-- HOW IT WORKS -->
 
-            <h2>Ready to Explore?</h2>
+  <section class="section" id="how-it-works">
 
-            <p>
-              Visit the promotion page to review the available
-              information and official participation details.
-            </p>
+    <div class="container">
 
-            <a
-              href="https://fdfrd.com"
-              class="primary-btn"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Continue to Promotion →
-            </a>
+      <div class="section-heading">
 
-          </div>
-
+        <div class="small-title">
+          Simple Process
         </div>
 
-      </section>
+        <h2>
+          How It Works
+        </h2>
 
-    </main>
-
-    <!-- Footer -->
-
-    <footer>
-
-      <div class="container">
-
-        <div class="footer-content">
-
-          <p>
-            © 2026 GiftDrop. All rights reserved.
-          </p>
-
-          <div class="footer-links">
-            <a href="#details">Details</a>
-            <a href="#how-it-works">How It Works</a>
-          </div>
-
-        </div>
-
-        <p class="disclaimer">
-          This page is an independent promotional landing page.
-          It is not sponsored, endorsed, administered by, or
-          affiliated with Amazon.com, Inc. or its affiliates.
-          Any reward, eligibility requirements, and promotion
-          conditions must be verified through the legitimate
-          promotion organizer.
+        <p>
+          Follow the steps below to understand how the
+          promotion works.
         </p>
 
       </div>
 
-    </footer>
 
-  </div>
+      <div class="steps">
 
-  <!-- Countdown JavaScript -->
+        <div class="step">
 
-  <script>
-    /*
-      Demo countdown:
-      The timer runs for 7 days from the moment
-      the page is first opened in this browser.
-    */
+          <div class="step-number">
+            01
+          </div>
 
-    const countdownDuration = 7 * 24 * 60 * 60 * 1000;
+          <h3>
+            Start the Offer
+          </h3>
 
-    let savedEndTime = localStorage.getItem(
-      "giftDropEndTime"
+          <p>
+            Click the button and visit the promotion page
+            to view the available offer.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">
+            02
+          </div>
+
+          <h3>
+            Complete an Offer
+          </h3>
+
+          <p>
+            Complete the required qualifying offer according
+            to the promotion instructions.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">
+            03
+          </div>
+
+          <h3>
+            Enter the Giveaway
+          </h3>
+
+          <p>
+            After completing the required offer, follow the
+            instructions to participate in the giveaway.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">
+            04
+          </div>
+
+          <h3>
+            Winner Selection
+          </h3>
+
+          <p>
+            Eligible entries are considered according to
+            the official promotion terms and conditions.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- DETAILS -->
+
+  <section class="section" id="details">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="small-title">
+          What You Should Know
+        </div>
+
+        <h2>
+          Before You Enter
+        </h2>
+
+        <p>
+          Make sure you understand the promotion requirements
+          before continuing.
+        </p>
+
+      </div>
+
+
+      <div class="benefits">
+
+        <div class="benefit">
+
+          <div class="benefit-icon">
+            🎁
+          </div>
+
+          <h3>
+            $250 Gift Card
+          </h3>
+
+          <p>
+            The advertised giveaway prize is a $250 Amazon
+            Gift Card. Prize availability is subject to the
+            official promotion terms.
+          </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+          <div class="benefit-icon">
+            ⚡
+          </div>
+
+          <h3>
+            Offer Required
+          </h3>
+
+          <p>
+            Participation requires completion of the qualifying
+            offer shown on the promotion page.
+          </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+          <div class="benefit-icon">
+            🔒
+          </div>
+
+          <h3>
+            Review the Rules
+          </h3>
+
+          <p>
+            Always review eligibility, offer requirements,
+            deadlines and official terms before participating.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- COUNTDOWN -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="countdown-wrap">
+
+        <h2>
+          Promotion Deadline
+        </h2>
+
+        <p>
+          Check the remaining time before the promotional period ends.
+        </p>
+
+        <div class="timer">
+
+          <div class="timer-box">
+            <strong id="days">--</strong>
+            <span>Days</span>
+          </div>
+
+          <div class="timer-box">
+            <strong id="hours">--</strong>
+            <span>Hours</span>
+          </div>
+
+          <div class="timer-box">
+            <strong id="minutes">--</strong>
+            <span>Minutes</span>
+          </div>
+
+          <div class="timer-box">
+            <strong id="seconds">--</strong>
+            <span>Seconds</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL CTA -->
+
+  <section class="final-cta">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <h2>
+          Ready for Your Chance?
+        </h2>
+
+        <p>
+          Complete the required offer and follow the promotion
+          instructions to participate in the giveaway.
+        </p>
+
+        <a
+          href="https://fdfrd.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="primary-btn"
+        >
+          🚀 Complete Offer & Enter
+        </a>
+
+        <div class="cta-note">
+          Participation is subject to applicable eligibility
+          requirements and official promotion terms.
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="section" id="faq">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="small-title">
+          FAQ
+        </div>
+
+        <h2>
+          Frequently Asked Questions
+        </h2>
+
+      </div>
+
+
+      <div class="steps">
+
+        <div class="step">
+
+          <h3>
+            What is the prize?
+          </h3>
+
+          <p>
+            The advertised prize is a $250 Amazon Gift Card,
+            subject to the official promotion terms.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <h3>
+            Do I need to complete an offer?
+          </h3>
+
+          <p>
+            Yes. If the promotion requires an offer to be
+            completed, you must complete the qualifying offer
+            before participating.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <h3>
+            Is winning guaranteed?
+          </h3>
+
+          <p>
+            No. Completing the required steps provides an
+            opportunity to participate; it does not guarantee
+            that you will win.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <h3>
+            Where do I start?
+          </h3>
+
+          <p>
+            Click the button above to review the available
+            offer and participation instructions.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-main">
+
+        <p>
+          © 2026 GiftDrop. All rights reserved.
+        </p>
+
+        <div class="footer-links">
+          <a href="#how-it-works">How It Works</a>
+          <a href="#details">Details</a>
+          <a href="#faq">FAQ</a>
+        </div>
+
+      </div>
+
+      <p class="disclaimer">
+        This is an independent promotional landing page and is not
+        sponsored, endorsed, administered by, or affiliated with
+        Amazon.com, Inc. or its affiliates. Amazon and related marks
+        belong to their respective owners. Prize, eligibility,
+        offer requirements, deadlines and winner-selection rules
+        are subject to the official promotion terms.
+      </p>
+
+    </div>
+
+  </footer>
+
+</div>
+
+
+<script>
+
+  /*
+    IMPORTANT:
+    Replace this date with the REAL promotion end date.
+
+    Format:
+    YYYY-MM-DDTHH:MM:SS
+
+    Example:
+    2026-09-30T23:59:59
+  */
+
+  const promotionEnd =
+    new Date("2026-09-30T23:59:59").getTime();
+
+
+  function updateTimer() {
+
+    const now = new Date().getTime();
+
+    const distance = promotionEnd - now;
+
+
+    if (distance <= 0) {
+
+      document.getElementById("days").textContent = "00";
+      document.getElementById("hours").textContent = "00";
+      document.getElementById("minutes").textContent = "00";
+      document.getElementById("seconds").textContent = "00";
+
+      return;
+    }
+
+
+    const days = Math.floor(
+      distance / (1000 * 60 * 60 * 24)
     );
 
-    if (!savedEndTime) {
-      savedEndTime = Date.now() + countdownDuration;
 
-      localStorage.setItem(
-        "giftDropEndTime",
-        savedEndTime
-      );
-    }
+    const hours = Math.floor(
+      (distance / (1000 * 60 * 60)) % 24
+    );
 
-    const endTime = Number(savedEndTime);
 
-    function updateCountdown() {
-      const now = Date.now();
-      const difference = endTime - now;
+    const minutes = Math.floor(
+      (distance / (1000 * 60)) % 60
+    );
 
-      if (difference <= 0) {
-        document.getElementById("days").textContent = "00";
-        document.getElementById("hours").textContent = "00";
-        document.getElementById("minutes").textContent = "00";
-        document.getElementById("seconds").textContent = "00";
-        return;
-      }
 
-      const days = Math.floor(
-        difference / (1000 * 60 * 60 * 24)
-      );
+    const seconds = Math.floor(
+      (distance / 1000) % 60
+    );
 
-      const hours = Math.floor(
-        (difference / (1000 * 60 * 60)) % 24
-      );
 
-      const minutes = Math.floor(
-        (difference / (1000 * 60)) % 60
-      );
+    document.getElementById("days").textContent =
+      String(days).padStart(2, "0");
 
-      const seconds = Math.floor(
-        (difference / 1000) % 60
-      );
 
-      document.getElementById("days").textContent =
-        String(days).padStart(2, "0");
+    document.getElementById("hours").textContent =
+      String(hours).padStart(2, "0");
 
-      document.getElementById("hours").textContent =
-        String(hours).padStart(2, "0");
 
-      document.getElementById("minutes").textContent =
-        String(minutes).padStart(2, "0");
+    document.getElementById("minutes").textContent =
+      String(minutes).padStart(2, "0");
 
-      document.getElementById("seconds").textContent =
-        String(seconds).padStart(2, "0");
-    }
 
-    updateCountdown();
+    document.getElementById("seconds").textContent =
+      String(seconds).padStart(2, "0");
 
-    setInterval(updateCountdown, 1000);
-  </script>
+  }
+
+
+  updateTimer();
+
+  setInterval(updateTimer, 1000);
+
+</script>
 
 </body>
 </html>
