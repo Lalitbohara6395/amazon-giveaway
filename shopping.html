@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Complete a qualifying offer for a chance to participate in a $500 shopping reward promotion."
+  >
+
+  <title>$500 Shopping Reward | Your Chance</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --accent: #7c5cff;
+      --accent-light: #a38cff;
+      --accent-soft: rgba(124, 92, 255, 0.12);
+
+      --black: #050507;
+      --dark: #0d0d11;
+      --dark-2: #141419;
+
+      --white: #ffffff;
+      --gray: #a5a5b0;
+      --muted: #777780;
+
+      --green: #38d996;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      background: var(--black);
+      color: var(--white);
+
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+
+    /* =================================
+       BACKGROUND EFFECTS
+    ================================= */
+
+    body::before {
+      content: "";
+
+      position: fixed;
+
+      width: 650px;
+      height: 650px;
+
+      top: -300px;
+      left: -250px;
+
+      background: rgba(124, 92, 255, 0.13);
+
+      filter: blur(130px);
+
+      border-radius: 50%;
+
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+
+      position: fixed;
+
+      width: 550px;
+      height: 550px;
+
+      right: -250px;
+      bottom: -250px;
+
+      background: rgba(124, 92, 255, 0.08);
+
+      filter: blur(130px);
+
+      border-radius: 50%;
+
+      z-index: -2;
+    }
+
+
+    /* =================================
+       NAVBAR
+    ================================= */
+
+    .navbar {
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
+      width: 100%;
+
+      padding: 22px 6%;
+
+      z-index: 20;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+
+      margin: auto;
+
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 21px;
+
+      font-weight: 850;
+
+      letter-spacing: -0.7px;
+    }
+
+    .logo span {
+      color: var(--accent-light);
+    }
+
+    .nav-pill {
+      padding: 8px 15px;
+
+      border-radius: 50px;
+
+      background: rgba(255,255,255,0.045);
+
+      border: 1px solid rgba(255,255,255,0.11);
+
+      color: #d5d5dc;
+
+      font-size: 12px;
+
+      font-weight: 600;
+    }
+
+
+    /* =================================
+       HERO
+    ================================= */
+
+    .hero {
+      min-height: 100vh;
+
+      padding: 145px 6% 100px;
+
+      display: flex;
+
+      align-items: center;
+
+      position: relative;
+    }
+
+    .hero-container {
+      width: 100%;
+
+      max-width: 1200px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: 1.05fr 0.95fr;
+
+      gap: 75px;
+
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      padding: 8px 15px;
+
+      border-radius: 50px;
+
+      background: var(--accent-soft);
+
+      border: 1px solid rgba(124,92,255,0.25);
+
+      color: #b6a7ff;
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.7px;
+
+      margin-bottom: 22px;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: var(--green);
+
+      box-shadow:
+        0 0 12px rgba(56,217,150,0.8);
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 6vw, 76px);
+
+      line-height: 0.97;
+
+      letter-spacing: -4px;
+
+      max-width: 720px;
+    }
+
+    .hero h1 span {
+      color: var(--accent-light);
+    }
+
+    .hero-description {
+      max-width: 650px;
+
+      margin-top: 26px;
+
+      color: var(--gray);
+
+      font-size: 18px;
+
+      line-height: 1.7;
+    }
+
+
+    /* =================================
+       CTA BUTTONS
+    ================================= */
+
+    .cta-row {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 14px;
+
+      margin-top: 35px;
+    }
+
+    .primary-btn {
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 9px;
+
+      padding: 16px 27px;
+
+      border-radius: 13px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--accent),
+          var(--accent-light)
+        );
+
+      color: #fff;
+
+      font-size: 15px;
+
+      font-weight: 800;
+
+      box-shadow:
+        0 15px 40px rgba(124,92,255,0.22);
+
+      transition: 0.25s ease;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 20px 50px rgba(124,92,255,0.35);
+    }
+
+    .secondary-btn {
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 16px 25px;
+
+      border-radius: 13px;
+
+      background: rgba(255,255,255,0.04);
+
+      border: 1px solid rgba(255,255,255,0.12);
+
+      color: #eee;
+
+      font-weight: 700;
+
+      transition: 0.25s ease;
+    }
+
+    .secondary-btn:hover {
+      background: rgba(255,255,255,0.08);
+
+      transform: translateY(-2px);
+    }
+
+
+    /* =================================
+       SHOPPING VISUAL
+    ================================= */
+
+    .visual {
+      display: flex;
+
+      justify-content: center;
+
+      position: relative;
+    }
+
+    .visual-glow {
+      position: absolute;
+
+      width: 330px;
+      height: 330px;
+
+      background: rgba(124,92,255,0.25);
+
+      filter: blur(75px);
+
+      border-radius: 50%;
+    }
+
+    .shopping-card {
+      width: 380px;
+
+      min-height: 360px;
+
+      padding: 30px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      border-radius: 27px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #202027,
+          #0c0c10
+        );
+
+      border: 1px solid rgba(255,255,255,0.13);
+
+      box-shadow:
+        0 35px 90px rgba(0,0,0,0.65),
+        0 0 70px rgba(124,92,255,0.12);
+
+      transform: rotate(3deg);
+
+      animation: cardFloat 4.5s ease-in-out infinite;
+    }
+
+    @keyframes cardFloat {
+
+      0%,100% {
+        transform:
+          translateY(0)
+          rotate(3deg);
+      }
+
+      50% {
+        transform:
+          translateY(-13px)
+          rotate(1deg);
+      }
+
+    }
+
+    .shopping-card::before {
+      content: "";
+
+      position: absolute;
+
+      width: 240px;
+      height: 240px;
+
+      border-radius: 50%;
+
+      right: -120px;
+      top: -100px;
+
+      background:
+        rgba(124,92,255,0.16);
+    }
+
+    .card-top {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+    }
+
+    .card-logo {
+      font-size: 18px;
+
+      font-weight: 850;
+    }
+
+    .card-label {
+      font-size: 10px;
+
+      color: #aaa;
+
+      letter-spacing: 1.5px;
+
+      text-transform: uppercase;
+    }
+
+    .card-icon {
+      width: 64px;
+      height: 64px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 18px;
+
+      margin-top: 55px;
+
+      background:
+        rgba(124,92,255,0.13);
+
+      border:
+        1px solid rgba(124,92,255,0.22);
+
+      font-size: 31px;
+    }
+
+    .card-title {
+      margin-top: 25px;
+
+      font-size: 16px;
+
+      color: #c9c9d0;
+    }
+
+    .card-value {
+      margin-top: 2px;
+
+      font-size: 55px;
+
+      line-height: 1;
+
+      font-weight: 900;
+
+      letter-spacing: -3px;
+
+      color: #fff;
+    }
+
+    .card-bottom {
+      position: absolute;
+
+      left: 30px;
+      right: 30px;
+      bottom: 25px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+    }
+
+    .card-bottom span {
+      font-size: 11px;
+
+      color: #888;
+    }
+
+    .card-mark {
+      width: 34px;
+      height: 34px;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--accent),
+          var(--accent-light)
+        );
+    }
+
+
+    /* =================================
+       REQUIREMENT BAR
+    ================================= */
+
+    .requirement {
+      max-width: 1100px;
+
+      margin: -20px auto 70px;
+
+      padding: 0 6%;
+    }
+
+    .requirement-inner {
+      padding: 21px 25px;
+
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 15px;
+
+      border-radius: 17px;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(124,92,255,0.10),
+          rgba(255,255,255,0.025)
+        );
+
+      border:
+        1px solid rgba(124,92,255,0.18);
+    }
+
+    .requirement-icon {
+      min-width: 43px;
+      height: 43px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 13px;
+
+      background:
+        rgba(124,92,255,0.13);
+
+      color: #b6a7ff;
+
+      font-size: 19px;
+    }
+
+    .requirement strong {
+      display: block;
+
+      font-size: 14px;
+
+      margin-bottom: 2px;
+    }
+
+    .requirement span {
+      color: var(--gray);
+
+      font-size: 13px;
+    }
+
+
+    /* =================================
+       GENERAL SECTIONS
+    ================================= */
+
+    section {
+      padding: 100px 6%;
+    }
+
+    .container {
+      max-width: 1100px;
+
+      margin: auto;
+    }
+
+    .section-heading {
+      max-width: 720px;
+
+      margin:
+        0 auto
+        55px;
+
+      text-align: center;
+    }
+
+    .section-heading small {
+      color: var(--accent-light);
+
+      font-size: 11px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 2px;
+
+      font-weight: 850;
+    }
+
+    .section-heading h2 {
+      margin-top: 12px;
+
+      font-size:
+        clamp(34px, 5vw, 51px);
+
+      line-height: 1.05;
+
+      letter-spacing: -2.5px;
+    }
+
+    .section-heading p {
+      margin-top: 16px;
+
+      color: var(--gray);
+    }
+
+
+    /* =================================
+       STEPS
+    ================================= */
+
+    .steps {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 18px;
+    }
+
+    .step {
+      padding: 28px;
+
+      border-radius: 19px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.055),
+          rgba(255,255,255,0.018)
+        );
+
+      border:
+        1px solid rgba(255,255,255,0.09);
+
+      transition: 0.25s ease;
+    }
+
+    .step:hover {
+      transform: translateY(-7px);
+
+      border-color:
+        rgba(124,92,255,0.35);
+    }
+
+    .step-number {
+      width: 43px;
+      height: 43px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 13px;
+
+      background:
+        rgba(124,92,255,0.13);
+
+      color: #b6a7ff;
+
+      font-size: 12px;
+
+      font-weight: 900;
+
+      margin-bottom: 24px;
+    }
+
+    .step h3 {
+      font-size: 18px;
+
+      margin-bottom: 9px;
+    }
+
+    .step p {
+      color: var(--gray);
+
+      font-size: 14px;
+    }
+
+
+    /* =================================
+       SHOPPING BENEFITS
+    ================================= */
+
+    .benefits {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap: 18px;
+    }
+
+    .benefit {
+      padding: 30px;
+
+      background:
+        #101014;
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      border-radius: 19px;
+    }
+
+    .benefit-icon {
+      width: 53px;
+      height: 53px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 15px;
+
+      background:
+        rgba(124,92,255,0.11);
+
+      font-size: 25px;
+
+      margin-bottom: 22px;
+    }
+
+    .benefit h3 {
+      margin-bottom: 9px;
+
+      font-size: 18px;
+    }
+
+    .benefit p {
+      color: var(--gray);
+
+      font-size: 14px;
+    }
+
+
+    /* =================================
+       REWARD HIGHLIGHT
+    ================================= */
+
+    .highlight {
+      text-align: center;
+    }
+
+    .highlight-box {
+      max-width: 900px;
+
+      margin: auto;
+
+      padding: 55px 30px;
+
+      border-radius: 25px;
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(124,92,255,0.15),
+          transparent 65%
+        ),
+        #101014;
+
+      border:
+        1px solid rgba(124,92,255,0.17);
+    }
+
+    .highlight-amount {
+      font-size:
+        clamp(60px, 9vw, 100px);
+
+      line-height: 0.9;
+
+      font-weight: 950;
+
+      letter-spacing: -6px;
+
+      color: #fff;
+
+      text-shadow:
+        0 0 45px rgba(124,92,255,0.25);
+    }
+
+    .highlight-box h3 {
+      margin-top: 20px;
+
+      font-size: 24px;
+    }
+
+    .highlight-box p {
+      max-width: 650px;
+
+      margin: 13px auto 28px;
+
+      color: var(--gray);
+    }
+
+
+    /* =================================
+       COUNTDOWN
+    ================================= */
+
+    .countdown-wrapper {
+      max-width: 750px;
+
+      margin: auto;
+
+      text-align: center;
+    }
+
+    .countdown {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4,1fr);
+
+      gap: 12px;
+
+      margin-top: 30px;
+    }
+
+    .time {
+      padding: 20px 10px;
+
+      border-radius: 14px;
+
+      background:
+        rgba(255,255,255,0.035);
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+    }
+
+    .time strong {
+      display: block;
+
+      font-size: 33px;
+
+      color: var(--accent-light);
+    }
+
+    .time span {
+      color: var(--muted);
+
+      font-size: 10px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.3px;
+    }
+
+
+    /* =================================
+       FAQ
+    ================================= */
+
+    .faq {
+      max-width: 800px;
+
+      margin: auto;
+    }
+
+    details {
+      padding: 22px 0;
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.09);
+    }
+
+    summary {
+      list-style: none;
+
+      cursor: pointer;
+
+      position: relative;
+
+      padding-right: 35px;
+
+      font-weight: 750;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+
+      position: absolute;
+
+      right: 0;
+
+      color: var(--accent-light);
+
+      font-size: 22px;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      margin-top: 13px;
+
+      color: var(--gray);
+
+      font-size: 14px;
+    }
+
+
+    /* =================================
+       FINAL CTA
+    ================================= */
+
+    .final {
+      text-align: center;
+
+      padding-bottom: 120px;
+    }
+
+    .final-box {
+      max-width: 900px;
+
+      margin: auto;
+
+      padding: 70px 30px;
+
+      border-radius: 28px;
+
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(124,92,255,0.17),
+          transparent 60%
+        ),
+        #111116;
+
+      border:
+        1px solid rgba(124,92,255,0.17);
+    }
+
+    .final-box h2 {
+      font-size:
+        clamp(36px,5vw,60px);
+
+      line-height: 1;
+
+      letter-spacing: -3px;
+    }
+
+    .final-box p {
+      max-width: 620px;
+
+      margin:
+        20px auto 30px;
+
+      color: var(--gray);
+    }
+
+
+    /* =================================
+       FOOTER
+    ================================= */
+
+    footer {
+      padding:
+        35px 6%;
+
+      border-top:
+        1px solid rgba(255,255,255,0.08);
+
+      text-align: center;
+    }
+
+    footer p {
+      max-width: 900px;
+
+      margin: auto;
+
+      color: #696970;
+
+      font-size: 11px;
+
+      line-height: 1.7;
+    }
+
+    footer p + p {
+      margin-top: 10px;
+    }
+
+
+    /* =================================
+       SCROLL ANIMATION
+    ================================= */
+
+    .reveal {
+      opacity: 0;
+
+      transform:
+        translateY(25px);
+
+      transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+
+      transform:
+        translateY(0);
+    }
+
+
+    /* =================================
+       MOBILE
+    ================================= */
+
+    @media (max-width: 900px) {
+
+      .hero-container {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .cta-row {
+        justify-content: center;
+      }
+
+      .visual {
+        margin-top: 30px;
+      }
+
+      .steps {
+        grid-template-columns:
+          repeat(2,1fr);
+      }
+
+      .benefits {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .navbar {
+        padding: 18px 5%;
+      }
+
+      .nav-pill {
+        display: none;
+      }
+
+      .hero {
+        padding:
+          120px 5% 70px;
+      }
+
+      .hero h1 {
+        font-size: 45px;
+
+        letter-spacing: -2.5px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .shopping-card {
+        width: 310px;
+
+        min-height: 320px;
+      }
+
+      .requirement {
+        padding: 0 5%;
+      }
+
+      section {
+        padding:
+          75px 5%;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .countdown {
+        grid-template-columns:
+          repeat(2,1fr);
+      }
+
+      .primary-btn,
+      .secondary-btn {
+        width: 100%;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =================================
+       NAVBAR
+  ================================= -->
+
+  <header class="navbar">
+
+    <div class="nav-inner">
+
+      <div class="logo">
+        Reward<span>Chance</span>
+      </div>
+
+      <div class="nav-pill">
+        Shopping Reward
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =================================
+       HERO
+  ================================= -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-container">
+
+
+        <div class="hero-content reveal">
+
+          <div class="eyebrow">
+
+            <span class="eyebrow-dot"></span>
+
+            Shopping Reward Opportunity
+
+          </div>
+
+
+          <h1>
+
+            A Chance at
+            <span>$500</span>
+            for Shopping
+
+          </h1>
+
+
+          <p class="hero-description">
+
+            Complete a qualifying offer and follow the participation
+            instructions for a chance to participate in this
+            $500 shopping reward promotion.
+
+          </p>
+
+
+          <div class="cta-row">
+
+            <a
+              href="https://fdfrd.com"
+              class="primary-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              🛍️ Complete Offer & Enter →
+            </a>
+
+
+            <a
+              href="#how-it-works"
+              class="secondary-btn"
+            >
+              See How It Works
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- SHOPPING CARD -->
+
+        <div class="visual reveal">
+
+          <div class="visual-glow"></div>
+
+
+          <div class="shopping-card">
+
+
+            <div class="card-top">
+
+              <div class="card-logo">
+                SHOPPING
+              </div>
+
+              <div class="card-label">
+                REWARD
+              </div>
+
+            </div>
+
+
+            <div class="card-icon">
+              🛍️
+            </div>
+
+
+            <div class="card-title">
+              Shopping Reward
+            </div>
+
+
+            <div class="card-value">
+              $500
+            </div>
+
+
+            <div class="card-bottom">
+
+              <span>
+                CHANCE TO WIN
+              </span>
+
+              <div class="card-mark"></div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================
+         REQUIREMENT
+    ================================= -->
+
+    <div class="requirement reveal">
+
+      <div class="requirement-inner">
+
+        <div class="requirement-icon">
+          ✓
+        </div>
+
+
+        <div>
+
+          <strong>
+            A qualifying offer is required
+          </strong>
+
+          <span>
+            Completing an offer does not guarantee a prize.
+            Review the offer details and applicable promotion terms
+            before participating.
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =================================
+         HOW IT WORKS
+    ================================= -->
+
+    <section id="how-it-works">
+
+      <div class="container">
+
+
+        <div class="section-heading reveal">
+
+          <small>
+            The Process
+          </small>
+
+          <h2>
+            How It Works
+          </h2>
+
+          <p>
+            Four simple steps to understand the participation process.
+          </p>
+
+        </div>
+
+
+        <div class="steps">
+
+
+          <div class="step reveal">
+
+            <div class="step-number">
+              01
+            </div>
+
+            <h3>
+              Start
+            </h3>
+
+            <p>
+              Click the participation button to view the available
+              qualifying offer.
+            </p>
+
+          </div>
+
+
+          <div class="step reveal">
+
+            <div class="step-number">
+              02
+            </div>
+
+            <h3>
+              Complete
+            </h3>
+
+            <p>
+              Complete the offer according to its displayed
+              requirements.
+            </p>
+
+          </div>
+
+
+          <div class="step reveal">
+
+            <div class="step-number">
+              03
+            </div>
+
+            <h3>
+              Participate
+            </h3>
+
+            <p>
+              Follow the instructions provided after completing the
+              required step.
+            </p>
+
+          </div>
+
+
+          <div class="step reveal">
+
+            <div class="step-number">
+              04
+            </div>
+
+            <h3>
+              Winner Selection
+            </h3>
+
+            <p>
+              Any winner selection will take place according to the
+              applicable official promotion terms.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================
+         BENEFITS
+    ================================= -->
+
+    <section>
+
+      <div class="container">
+
+
+        <div class="section-heading reveal">
+
+          <small>
+            Shopping Focused
+          </small>
+
+          <h2>
+            Why This Reward Stands Out
+          </h2>
+
+          <p>
+            A clean and straightforward experience designed around
+            everyday shopping.
+          </p>
+
+        </div>
+
+
+        <div class="benefits">
+
+
+          <div class="benefit reveal">
+
+            <div class="benefit-icon">
+              🛒
+            </div>
+
+            <h3>
+              Everyday Shopping
+            </h3>
+
+            <p>
+              A shopping-focused reward concept designed for everyday
+              consumer needs.
+            </p>
+
+          </div>
+
+
+          <div class="benefit reveal">
+
+            <div class="benefit-icon">
+              💳
+            </div>
+
+            <h3>
+              $500 Reward
+            </h3>
+
+            <p>
+              The promotional prize shown on this page is a
+              $500 shopping reward, subject to the applicable terms.
+            </p>
+
+          </div>
+
+
+          <div class="benefit reveal">
+
+            <div class="benefit-icon">
+              📱
+            </div>
+
+            <h3>
+              Mobile Ready
+            </h3>
+
+            <p>
+              The landing page is optimized for smartphones, tablets
+              and desktop screens.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================
+         BIG REWARD
+    ================================= -->
+
+    <section class="highlight">
+
+      <div class="highlight-box reveal">
+
+        <div class="highlight-amount">
+          $500
+        </div>
+
+        <h3>
+          Shopping Reward Opportunity
+        </h3>
+
+        <p>
+          Complete the required qualifying offer and follow the
+          participation instructions for a chance to be included.
+        </p>
+
+        <a
+          href="https://fdfrd.com"
+          class="primary-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          See Available Offer →
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================
+         COUNTDOWN
+    ================================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="countdown-wrapper reveal">
+
+
+          <div class="section-heading">
+
+            <small>
+              Promotion Deadline
+            </small>
+
+            <h2>
+              Time Remaining
+            </h2>
+
+            <p>
+              Only use this countdown when a real and verified
+              promotion deadline applies.
+            </p>
+
+          </div>
+
+
+          <div class="countdown">
+
+
+            <div class="time">
+
+              <strong id="days">
+                00
+              </strong>
+
+              <span>
+                Days
+              </span>
+
+            </div>
+
+
+            <div class="time">
+
+              <strong id="hours">
+                00
+              </strong>
+
+              <span>
+                Hours
+              </span>
+
+            </div>
+
+
+            <div class="time">
+
+              <strong id="minutes">
+                00
+              </strong>
+
+              <span>
+                Minutes
+              </span>
+
+            </div>
+
+
+            <div class="time">
+
+              <strong id="seconds">
+                00
+              </strong>
+
+              <span>
+                Seconds
+              </span>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================
+         FAQ
+    ================================= -->
+
+    <section>
+
+      <div class="container">
+
+
+        <div class="section-heading reveal">
+
+          <small>
+            FAQ
+          </small>
+
+          <h2>
+            Questions, Answered
+          </h2>
+
+        </div>
+
+
+        <div class="faq">
+
+
+          <details class="reveal">
+
+            <summary>
+              How do I participate?
+            </summary>
+
+            <p>
+              Click one of the participation buttons, review the
+              available offer and complete the qualifying requirements.
+              Then follow the provided participation instructions.
+            </p>
+
+          </details>
+
+
+          <details class="reveal">
+
+            <summary>
+              Is the $500 reward guaranteed?
+            </summary>
+
+            <p>
+              No. Completing a qualifying offer does not guarantee
+              winning a reward. Any winner selection is subject to the
+              applicable official promotion terms.
+            </p>
+
+          </details>
+
+
+          <details class="reveal">
+
+            <summary>
+              Do I have to purchase something?
+            </summary>
+
+            <p>
+              Offer requirements can vary. Carefully review the
+              specific offer details before completing any action.
+            </p>
+
+          </details>
+
+
+          <details class="reveal">
+
+            <summary>
+              Is this page affiliated with a specific retailer?
+            </summary>
+
+            <p>
+              This landing page does not claim sponsorship or
+              endorsement by any retailer unless explicitly stated in
+              valid official promotion terms.
+            </p>
+
+          </details>
+
+
+          <details class="reveal">
+
+            <summary>
+              Where can I see the available offer?
+            </summary>
+
+            <p>
+              Use the participation button on this page to continue
+              to the available offer experience.
+            </p>
+
+          </details>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================
+         FINAL CTA
+    ================================= -->
+
+    <section class="final">
+
+      <div class="final-box reveal">
+
+        <h2>
+          Your Shopping Chance Starts Here
+        </h2>
+
+        <p>
+          Check the available offer, complete the qualifying
+          requirements and follow the participation instructions.
+        </p>
+
+
+        <a
+          href="https://fdfrd.com"
+          class="primary-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🛍️ Complete Offer & Continue →
+        </a>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =================================
+       FOOTER
+  ================================= -->
+
+  <footer>
+
+    <p>
+      This is an independent promotional landing page. It is not
+      sponsored, endorsed, administered by, or affiliated with any
+      retailer or shopping brand unless explicitly stated in valid
+      official promotion terms. Reward availability, eligibility,
+      participation requirements and winner selection are subject to
+      the applicable promotion terms.
+    </p>
+
+
+    <p>
+      © 2026 RewardChance. All rights reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- =================================
+       JAVASCRIPT
+  ================================= -->
+
+  <script>
+
+
+    /* =================================
+       COUNTDOWN
+
+       IMPORTANT:
+       Replace this date only with the
+       REAL promotion deadline.
+    ================================= */
+
+    const deadline =
+      new Date(
+        "2026-09-30T23:59:59"
+      ).getTime();
+
+
+    function updateCountdown() {
+
+      const now =
+        new Date().getTime();
+
+
+      const difference =
+        deadline - now;
+
+
+      if (difference <= 0) {
+
+        document.getElementById("days")
+          .textContent = "00";
+
+        document.getElementById("hours")
+          .textContent = "00";
+
+        document.getElementById("minutes")
+          .textContent = "00";
+
+        document.getElementById("seconds")
+          .textContent = "00";
+
+        return;
+      }
+
+
+      const days =
+        Math.floor(
+          difference /
+          (1000 * 60 * 60 * 24)
+        );
+
+
+      const hours =
+        Math.floor(
+          (difference %
+            (1000 * 60 * 60 * 24)) /
+            (1000 * 60 * 60)
+        );
+
+
+      const minutes =
+        Math.floor(
+          (difference %
+            (1000 * 60 * 60)) /
+            (1000 * 60)
+        );
+
+
+      const seconds =
+        Math.floor(
+          (difference %
+            (1000 * 60)) /
+            1000
+        );
+
+
+      document.getElementById("days")
+        .textContent =
+        String(days).padStart(2, "0");
+
+
+      document.getElementById("hours")
+        .textContent =
+        String(hours).padStart(2, "0");
+
+
+      document.getElementById("minutes")
+        .textContent =
+        String(minutes).padStart(2, "0");
+
+
+      document.getElementById("seconds")
+        .textContent =
+        String(seconds).padStart(2, "0");
+
+    }
+
+
+    updateCountdown();
+
+    setInterval(
+      updateCountdown,
+      1000
+    );
+
+
+    /* =================================
+       SCROLL REVEAL
+    ================================= */
+
+    const elements =
+      document.querySelectorAll(
+        ".reveal"
+      );
+
+
+    const observer =
+      new IntersectionObserver(
+
+        function(entries) {
+
+          entries.forEach(
+            function(entry) {
+
+              if (
+                entry.isIntersecting
+              ) {
+
+                entry.target.classList.add(
+                  "show"
+                );
+
+                observer.unobserve(
+                  entry.target
+                );
+
+              }
+
+            }
+          );
+
+        },
+
+        {
+          threshold: 0.12
+        }
+
+      );
+
+
+    elements.forEach(
+      function(element) {
+
+        observer.observe(
+          element
+        );
+
+      }
+    );
+
+
+  </script>
+
+</body>
+</html>
