@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Electronics Reward | Promotional Opportunity</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#070a0e;
+    color:#fff;
+    line-height:1.6;
+}
+
+.container{
+    width:min(1100px,92%);
+    margin:auto;
+}
+
+/* NAV */
+nav{
+    padding:20px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:900;
+    letter-spacing:.5px;
+}
+
+.logo span{
+    color:#38bdf8;
+}
+
+/* HERO */
+.hero{
+    padding:70px 0 55px;
+    text-align:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 17px;
+    border:1px solid #38bdf8;
+    color:#58c9fa;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1px;
+    margin-bottom:22px;
+}
+
+h1{
+    font-size:clamp(40px,7vw,76px);
+    line-height:1.04;
+    margin-bottom:20px;
+}
+
+h1 span{
+    color:#38bdf8;
+}
+
+.hero p{
+    max-width:730px;
+    margin:auto;
+    color:#a8b1bb;
+    font-size:18px;
+}
+
+/* DEVICE DISPLAY */
+.device-card{
+    max-width:760px;
+    margin:50px auto;
+    padding:45px 30px;
+    border-radius:28px;
+    background:
+        radial-gradient(circle at 50% 0%,rgba(56,189,248,.18),transparent 45%),
+        linear-gradient(145deg,#111820,#0b1015);
+    border:1px solid rgba(56,189,248,.25);
+    box-shadow:0 25px 80px rgba(0,0,0,.5);
+}
+
+.devices{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.phone{
+    width:90px;
+    height:155px;
+    border:4px solid #242d35;
+    border-radius:18px;
+    background:linear-gradient(145deg,#17232c,#071016);
+    position:relative;
+    box-shadow:0 0 35px rgba(56,189,248,.15);
+}
+
+.phone:before{
+    content:"";
+    position:absolute;
+    top:8px;
+    left:50%;
+    transform:translateX(-50%);
+    width:28px;
+    height:5px;
+    border-radius:5px;
+    background:#303a42;
+}
+
+.laptop{
+    width:170px;
+    height:105px;
+    border:5px solid #242d35;
+    border-radius:10px 10px 4px 4px;
+    background:linear-gradient(145deg,#16222b,#071016);
+    position:relative;
+}
+
+.laptop:after{
+    content:"";
+    position:absolute;
+    left:-18px;
+    right:-18px;
+    bottom:-13px;
+    height:8px;
+    border-radius:5px;
+    background:#303b44;
+}
+
+.reward-title{
+    color:#aab4bd;
+    font-size:16px;
+    margin-bottom:5px;
+}
+
+.reward{
+    font-size:50px;
+    font-weight:900;
+    color:#38bdf8;
+}
+
+.reward-sub{
+    color:#78838d;
+    font-size:14px;
+}
+
+.cta{
+    display:inline-block;
+    margin-top:30px;
+    padding:17px 36px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#38bdf8,#087db1);
+    color:#031018;
+    text-decoration:none;
+    font-weight:900;
+    font-size:16px;
+    box-shadow:0 10px 35px rgba(56,189,248,.2);
+    transition:.25s;
+}
+
+.cta:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 45px rgba(56,189,248,.35);
+}
+
+.notice{
+    margin-top:24px;
+    padding:15px;
+    border-radius:12px;
+    background:#10171d;
+    color:#9aa6af;
+    font-size:13px;
+}
+
+/* SECTIONS */
+.section{
+    padding:70px 0;
+}
+
+.section h2{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:38px;
+}
+
+/* STEPS */
+.steps{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.step{
+    padding:30px;
+    border-radius:18px;
+    background:#10161c;
+    border:1px solid rgba(255,255,255,.07);
+}
+
+.number{
+    width:44px;
+    height:44px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#38bdf8;
+    color:#041019;
+    font-weight:900;
+    margin-bottom:18px;
+}
+
+.step h3{
+    margin-bottom:10px;
+}
+
+.step p{
+    color:#98a3ad;
+    font-size:14px;
+}
+
+/* PRODUCT TYPES */
+.products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.product{
+    padding:30px;
+    text-align:center;
+    border-radius:18px;
+    background:#0f151b;
+    border:1px solid rgba(255,255,255,.06);
+}
+
+.product-icon{
+    font-size:45px;
+    margin-bottom:12px;
+}
+
+.product h3{
+    margin-bottom:8px;
+}
+
+.product p{
+    color:#96a1ab;
+    font-size:14px;
+}
+
+/* HIGHLIGHT */
+.highlight{
+    padding:55px 25px;
+    text-align:center;
+    border-radius:25px;
+    background:
+        radial-gradient(circle at center,rgba(56,189,248,.14),transparent 60%),
+        #0e1419;
+    border:1px solid rgba(56,189,248,.2);
+}
+
+.highlight h2{
+    margin-bottom:12px;
+}
+
+.highlight p{
+    max-width:680px;
+    margin:auto;
+    color:#a4afb8;
+}
+
+/* FAQ */
+.faq{
+    max-width:760px;
+    margin:auto;
+}
+
+details{
+    background:#10161c;
+    border:1px solid rgba(255,255,255,.07);
+    padding:20px;
+    margin-bottom:12px;
+    border-radius:12px;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:700;
+}
+
+details p{
+    color:#99a4ad;
+    font-size:14px;
+    margin-top:12px;
+}
+
+/* FOOTER */
+footer{
+    border-top:1px solid rgba(255,255,255,.07);
+    padding:35px 0;
+    text-align:center;
+    color:#707b84;
+    font-size:12px;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    .steps,
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .device-card{
+        padding:35px 20px;
+    }
+
+    .devices{
+        transform:scale(.85);
+    }
+
+    .reward{
+        font-size:42px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="container">
+
+<div class="logo">
+Tech<span>Rewards</span>
+</div>
+
+</div>
+
+</nav>
+
+
+<section class="hero">
+
+<div class="container">
+
+<div class="badge">
+ELECTRONICS REWARD OPPORTUNITY
+</div>
+
+<h1>
+Upgrade Your Tech<br>
+<span>Reward Opportunity</span>
+</h1>
+
+<p>
+Complete a qualifying offer to become eligible to participate
+in this electronics reward promotional opportunity.
+</p>
+
+
+<div class="device-card">
+
+<div class="devices">
+
+<div class="phone"></div>
+
+<div class="laptop"></div>
+
+<div class="phone"></div>
+
+</div>
+
+<div class="reward-title">
+Electronics Reward Opportunity
+</div>
+
+<div class="reward">
+$250 Reward
+</div>
+
+<div class="reward-sub">
+Participation subject to applicable offer terms
+</div>
+
+<a href="https://fdfrd.com" class="cta">
+CONTINUE TO OFFERS →
+</a>
+
+<div class="notice">
+A qualifying offer must be completed to participate.
+Completion does not guarantee receiving a reward.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<h2>How It Works</h2>
+
+<div class="steps">
+
+<div class="step">
+
+<div class="number">1</div>
+
+<h3>Start</h3>
+
+<p>
+Click the button to continue to the currently available offer.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">2</div>
+
+<h3>Complete an Offer</h3>
+
+<p>
+Complete the qualifying offer according to its displayed
+requirements and terms.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">3</div>
+
+<h3>Participate</h3>
+
+<p>
+After completing the required offer, follow the participation
+instructions provided.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<h2>What Could You Upgrade?</h2>
+
+<div class="products">
+
+<div class="product">
+
+<div class="product-icon">📱</div>
+
+<h3>Smartphones</h3>
+
+<p>
+Explore the possibility of putting a reward toward your next
+mobile device.
+</p>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-icon">💻</div>
+
+<h3>Laptops</h3>
+
+<p>
+A potential opportunity to put a promotional reward toward
+your technology needs.
+</p>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-icon">🎧</div>
+
+<h3>Accessories</h3>
+
+<p>
+From headphones to other electronics, there are plenty of
+ways to upgrade your setup.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="highlight">
+
+<h2>
+Ready to Check the Available Offer?
+</h2>
+
+<p>
+Continue below to view the current offer and applicable
+requirements. Eligibility and participation are subject
+to the terms presented with the offer.
+</p>
+
+<a href="https://fdfrd.com" class="cta">
+CHECK AVAILABLE OFFER →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<h2>
+Frequently Asked Questions
+</h2>
+
+<div class="faq">
+
+<details>
+
+<summary>
+How do I participate?
+</summary>
+
+<p>
+Click the offer button and complete the qualifying offer
+according to the applicable terms.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Is the $250 reward guaranteed?
+</summary>
+
+<p>
+No. Completing a qualifying offer does not guarantee that
+you will receive a reward. Eligibility and participation
+are subject to the applicable promotion terms.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Is this affiliated with Apple, Samsung or another electronics brand?
+</summary>
+
+<p>
+Unless specifically stated in the applicable official terms,
+this page should not be interpreted as being sponsored,
+endorsed, or affiliated with a particular electronics brand,
+manufacturer, retailer, or technology company.
+</p>
+
+</details>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="container">
+
+This website is an independent promotional landing page.
+No electronics manufacturer, retailer, technology company,
+or brand affiliation is implied unless explicitly stated
+in the applicable promotion terms.
+
+<br><br>
+
+© 2026 TechRewards. All rights reserved.
+
+</div>
+
+</footer>
+
+</body>
+</html>
